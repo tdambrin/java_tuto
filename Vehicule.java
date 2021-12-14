@@ -2,8 +2,9 @@ public class Vehicule {
 
     private int tailleX;
     private int tailleY;
+    private Color couleur;
 
-    public Vehicule(int tailleX, int tailleY) {
+    public Vehicule(int tailleX, int tailleY, Color couleur) {
         // code here
     }
 

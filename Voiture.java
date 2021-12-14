@@ -8,11 +8,17 @@ public class Voiture {
     private Color couleur;
 
     public Voiture(int tailleX, int tailleY, String marque, Color couleur) {
-        // code here
+        this.tailleX = tailleX;
+        this.tailleY = tailleY;
+        this.marque = marque;
+        this.couleur = couleur;
     }
 
     public Voiture(){
-        //code here
+        this.tailleX = 10;
+        this.tailleY = 5;
+        this.marque = "Audi";
+        this.couleur = Color.WHITE;
     }
     
     public String toString() {

@@ -7,12 +7,14 @@ public class Velo {
     private Color couleur;
 
     public Velo(int tailleX, int tailleY, Color couleur) {
-        // code here
-    }
+        this.tailleX = tailleX;
+        this.tailleY = tailleY;
+        this.couleur = couleur;    }
 
     public Velo(){
-        //code here
-    }
+        this.tailleX = 2;
+        this.tailleY = 1;
+        this.couleur = Color.BLUE;    }
     
     public String toString() {
         return ("Vehicule - dimensions (" + this.tailleX + "," + this.tailleY + ")" + " - type : Velo - couleur : " + this.couleur.toString());

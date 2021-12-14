@@ -6,7 +6,8 @@ public class Parking {
     private boolean[][] casesLibres;
 
     public Parking(int longueur, int largeur){
-        // code here
+        this.longueur = longueur;
+        this.largeur = largeur;
     }
 
     @Override
@@ -16,5 +17,6 @@ public class Parking {
 
     public boolean addVehicule(Vehicule v, int x, int y){
         // code here
+        return true;
     }
 }

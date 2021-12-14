@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class Vehicule {
 
     private int tailleX;
@@ -5,7 +7,9 @@ public class Vehicule {
     private Color couleur;
 
     public Vehicule(int tailleX, int tailleY, Color couleur) {
-        // code here
+        this.tailleX = tailleX;
+        this.tailleY = tailleY;
+        this.couleur = couleur;
     }
 
     public String toString() {

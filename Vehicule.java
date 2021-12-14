@@ -2,9 +2,9 @@ import java.awt.*;
 
 public class Vehicule {
 
-    private int tailleX;
-    private int tailleY;
-    private Color couleur;
+    protected int tailleX;
+    protected int tailleY;
+    protected Color couleur;
 
     public Vehicule(int tailleX, int tailleY, Color couleur) {
         this.tailleX = tailleX;

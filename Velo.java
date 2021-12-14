@@ -1,22 +1,20 @@
 import java.awt.*;
 
-public class Velo {
+public class Velo extends Vehicule {
 
-    private int tailleX;
-    private int tailleY;
-    private Color couleur;
+    //private int tailleX;
+    //private int tailleY;
+    //private Color couleur;
 
     public Velo(int tailleX, int tailleY, Color couleur) {
-        this.tailleX = tailleX;
-        this.tailleY = tailleY;
-        this.couleur = couleur;    }
+        super(tailleX, tailleY, couleur);  
+    }
 
     public Velo(){
-        this.tailleX = 2;
-        this.tailleY = 1;
-        this.couleur = Color.BLUE;    }
+        super(2, 1, Color.BLUE);  
+    }
     
     public String toString() {
-        return ("Vehicule - dimensions (" + this.tailleX + "," + this.tailleY + ")" + " - type : Velo - couleur : " + this.couleur.toString());
+        return (super.toString() + " - type : Velo - couleur : " + this.couleur.toString());
     }
 }

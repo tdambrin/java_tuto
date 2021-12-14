@@ -1,27 +1,23 @@
 import java.awt.*;
 
-public class Voiture {
+public class Voiture extends Vehicule {
 
-    private int tailleX;
-    private int tailleY;
+    //private int tailleX;
+    //private int tailleY;
     private String marque;
-    private Color couleur;
+    //private Color couleur;
 
     public Voiture(int tailleX, int tailleY, String marque, Color couleur) {
-        this.tailleX = tailleX;
-        this.tailleY = tailleY;
+        super(tailleX, tailleY, couleur);
         this.marque = marque;
-        this.couleur = couleur;
     }
 
     public Voiture(){
-        this.tailleX = 10;
-        this.tailleY = 5;
+        super(10, 5, Color.WHITE);
         this.marque = "Audi";
-        this.couleur = Color.WHITE;
     }
     
     public String toString() {
-        return ("Vehicule - dimensions (" + this.tailleX + "," + this.tailleY + ")" + " - type : Voiture - marque : " + this.marque + " - couleur : " + this.couleur.toString());
+        return (super.toString() + " - type : Voiture - marque : " + this.marque + " - couleur : " + this.couleur.toString());
     }
 }

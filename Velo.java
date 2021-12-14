@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Voiture {
+public class Velo {
 
     private int tailleX;
     private int tailleY;

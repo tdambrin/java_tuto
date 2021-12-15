@@ -43,7 +43,7 @@ public class ParkingViz extends JFrame implements MouseListener {
 
         // vehicules
         int nbVehicules = this.parking.getNbVehicules();
-        System.out.println("Parking in viz : \n" + this.parking.toString());
+        //System.out.println("Parking in viz : \n" + this.parking.toString());
         for (int i = 0; i < nbVehicules; i++){
             Vehicule vehiculeCourant = parking.getVehicule(i);
             g.setColor( vehiculeCourant.getCouleur());

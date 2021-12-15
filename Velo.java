@@ -2,10 +2,6 @@ import java.awt.*;
 
 public class Velo extends Vehicule {
 
-    //private int tailleX;
-    //private int tailleY;
-    //private Color couleur;
-
     public Velo(int tailleX, int tailleY, Color couleur) {
         super(tailleX, tailleY, couleur);  
     }

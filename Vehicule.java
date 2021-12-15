@@ -16,4 +16,11 @@ public class Vehicule {
         return ("Vehicule de dimensions (" + this.tailleX + "," + this.tailleY + ")");
     }
 
+    public int getTailleX() {
+        return this.tailleX;
+    }
+
+    public int getTailleY() {
+        return this.tailleY;
+    }
 }

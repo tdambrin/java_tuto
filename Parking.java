@@ -111,4 +111,14 @@ public class Parking {
     public int getLargeur() {
         return this.largeur;
     }
+
+    public int getVehiculeIndexByPosition(int x, int y) {
+        for (int i = 0; i < this.nbVehicules; i++) {
+            Vehicule tempVehicule = new Vehicule(1,1,null);
+            if (vehiculesSuperpose(tempVehicule, x, y, i)) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }

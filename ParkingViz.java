@@ -4,10 +4,11 @@ import javax.swing.JFrame ;
 public class ParkingViz extends JFrame {
     private Parking parking;
 
+    int ZOOM_FACTOR = 15;
     public ParkingViz() {
         super("Parking vizualization");
         this.parking = new Parking(100, 100);
-        setSize(1000, 1000);
+        setSize(100*ZOOM_FACTOR, 100*ZOOM_FACTOR);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
@@ -15,7 +16,7 @@ public class ParkingViz extends JFrame {
     public ParkingViz(Parking parking) {
         super("Parking vizualization");
         this.parking = parking;
-        setSize(parking.getLongueur()*10, parking.getLargeur()*10);
+        setSize(parking.getLongueur()*ZOOM_FACTOR, parking.getLargeur()*ZOOM_FACTOR);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
@@ -28,10 +29,10 @@ public class ParkingViz extends JFrame {
         // quadrillage
         g.setColor(Color.GRAY);
         for (int x = 0; x < this.parking.getLongueur(); x++) {
-            g.drawLine(x*10, 0, x*10, getSize().height);
+            g.drawLine(x*ZOOM_FACTOR, 0, x*ZOOM_FACTOR, getSize().height);
         }
         for (int y = 0; y < this.parking.getLargeur(); y++) {
-            g.drawLine(0, y*10, getSize().width, y*10);
+            g.drawLine(0, y*ZOOM_FACTOR, getSize().width, y*ZOOM_FACTOR);
         }
 
         // vehicules
@@ -40,10 +41,10 @@ public class ParkingViz extends JFrame {
         for (int i = 0; i < nbVehicules; i++){
             Vehicule vehiculeCourant = parking.getVehicule(i);
             g.setColor( vehiculeCourant.getCouleur());
-            g.fillRect( parking.getPosX(i)*10, 
-                        parking.getPosY(i)*10,
-                        vehiculeCourant.getTailleX()*10,
-                        vehiculeCourant.getTailleY()*10
+            g.fillRect( parking.getPosX(i)*ZOOM_FACTOR, 
+                        parking.getPosY(i)*ZOOM_FACTOR,
+                        vehiculeCourant.getTailleX()*ZOOM_FACTOR,
+                        vehiculeCourant.getTailleY()*ZOOM_FACTOR
             );
         }
     }

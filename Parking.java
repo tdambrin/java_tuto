@@ -24,7 +24,7 @@ public class Parking {
         if (this.nbVehicules > 0) {
             res += "\n vehicules : [\n";
             for (int i = 0; i < this.nbVehicules; i ++) {
-                res += " - " + this.vehicules[i].toString() + "\n";
+                res += " - " + this.vehicules[i].toString() + " at position (" + this.positionsX[i] + "," + this.positionsY[i] + ")\n";
             }
             res += "]";
         }
@@ -86,5 +86,29 @@ public class Parking {
             }
         }
         return res;
+    }
+
+    public int getNbVehicules() {
+        return this.nbVehicules;
+    }
+
+    public Vehicule getVehicule(int index) {
+        return this.vehicules[index];
+    }
+
+    public int getPosX(int index) {
+        return this.positionsX[index];
+    }
+
+    public int getPosY(int index) {
+        return this.positionsY[index];
+    }
+
+    public int getLongueur() {
+        return this.longueur;
+    }
+
+    public int getLargeur() {
+        return this.largeur;
     }
 }

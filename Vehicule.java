@@ -23,4 +23,8 @@ public class Vehicule {
     public int getTailleY() {
         return this.tailleY;
     }
+
+    public Color getCouleur() {
+        return this.couleur;
+    }
 }
